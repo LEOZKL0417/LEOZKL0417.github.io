@@ -298,6 +298,135 @@ main {
   font-size: 0.88rem;
 }
 
+.page-shell {
+  width: min(1024px, calc(100% - 40px));
+  margin: 24px auto 64px;
+  display: grid;
+  gap: 18px;
+}
+
+.intro-card,
+.detail-card,
+.feed-button {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.intro-card {
+  border-radius: var(--radius-lg);
+  padding: clamp(24px, 4.8vw, 44px);
+}
+
+.intro-card h1 {
+  font-size: clamp(2rem, 5vw, 3.1rem);
+  margin-bottom: 12px;
+}
+
+.intro-card p {
+  color: var(--muted);
+}
+
+.feed-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.feed-button {
+  grid-column: span 6;
+  border-radius: var(--radius-md);
+  padding: 20px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.feed-button:hover {
+  transform: translateY(-2px);
+  border-color: rgba(209, 79, 45, 0.45);
+  box-shadow: 0 20px 34px rgba(17, 26, 38, 0.16);
+}
+
+.feed-button h3 {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+.feed-button p {
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.meta-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--accent-deep);
+  background: rgba(209, 79, 45, 0.1);
+  border: 1px solid rgba(209, 79, 45, 0.3);
+}
+
+.meta-date,
+.meta-link {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.meta-link:hover {
+  color: var(--accent-deep);
+}
+
+.back-link {
+  width: fit-content;
+  font-size: 0.9rem;
+  color: var(--accent-deep);
+  font-weight: 700;
+}
+
+.detail-card {
+  border-radius: var(--radius-lg);
+  padding: clamp(24px, 4.8vw, 44px);
+}
+
+.detail-card h1 {
+  font-size: clamp(2rem, 5vw, 3.3rem);
+  margin-bottom: 14px;
+}
+
+.section-block {
+  margin-top: 18px;
+  padding: 16px 18px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(31, 36, 48, 0.12);
+}
+
+.section-block h2 {
+  font-size: 1.45rem;
+  margin-bottom: 6px;
+}
+
+.section-block p {
+  color: var(--muted);
+}
+
+.empty-state {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(14px);
@@ -315,6 +444,10 @@ main {
   .project-card {
     grid-column: span 6;
   }
+
+  .feed-button {
+    grid-column: span 12;
+  }
 }
 
 @media (max-width: 700px) {
@@ -323,6 +456,10 @@ main {
   }
 
   main {
+    width: min(1024px, calc(100% - 26px));
+  }
+
+  .page-shell {
     width: min(1024px, calc(100% - 26px));
   }
 

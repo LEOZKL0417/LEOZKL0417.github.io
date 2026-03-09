@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interesting Detail | Leo</title>
+    <meta
+      name="description"
+      content="Leo 的内容详情页，包含 summary 和个人思考。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="bg-shape bg-shape-left" aria-hidden="true"></div>
+    <div class="bg-shape bg-shape-right" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand" href="index.html">LEO</a>
+      <nav class="nav-links" aria-label="主导航">
+        <a href="index.html">主页</a>
+        <a href="interesting.html">Interesting</a>
+      </nav>
+    </header>
+
+    <main class="page-shell">
+      <a class="back-link reveal" href="interesting.html">← 返回条目列表</a>
+      <article id="detail-view" class="detail-card reveal"></article>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Leo. Built on GitHub Pages.</p>
+    </footer>
+
+    <script src="interesting-data.js"></script>
+    <script src="interesting.js"></script>
+  </body>
+</html>
