@@ -10,5 +10,4 @@ window.interestingItems = [
   summary: "Memo APP的Update",
   thoughts: "这里写你的想法 thoughts"
 }
-
 ];
