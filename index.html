@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leo | 个人主页</title>
+    <meta
+      name="description"
+      content="Leo 的个人主页，展示个人介绍、项目作品与联系方式。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="bg-shape bg-shape-left" aria-hidden="true"></div>
+    <div class="bg-shape bg-shape-right" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand" href="#top">LEO</a>
+      <nav class="nav-links" aria-label="主导航">
+        <a href="#about">关于我</a>
+        <a href="#projects">项目</a>
+        <a href="#contact">联系</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero reveal">
+        <p class="kicker">GitHub Pages Personal Site</p>
+        <h1>你好，我是 <span class="highlight">Leo</span></h1>
+        <p class="hero-text">
+          我在这里记录个人项目、学习路径和持续构建的作品。欢迎访问我的
+          GitHub，查看代码与更新。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">查看项目</a>
+          <a
+            class="btn btn-ghost"
+            href="https://github.com/LEOZKL0417"
+            target="_blank"
+            rel="noreferrer"
+            >GitHub</a
+          >
+        </div>
+      </section>
+
+      <section id="about" class="card reveal">
+        <h2>关于我</h2>
+        <p>
+          我是一名正在持续打磨工程能力的开发者，关注后端系统、智能应用和产品落地。
+          我喜欢把复杂问题拆开，做成可维护、可演进的代码。
+        </p>
+        <ul class="facts">
+          <li><span>领域</span> Web 开发 / AI 应用</li>
+          <li><span>风格</span> 重视可读性、测试与工程质量</li>
+          <li><span>目标</span> 做有长期价值的软件</li>
+        </ul>
+      </section>
+
+      <section id="projects" class="reveal">
+        <div class="section-head">
+          <h2>项目展示</h2>
+          <p>你可以把下面内容替换成自己的真实项目。</p>
+        </div>
+        <div class="grid">
+          <article class="project-card">
+            <h3>Project A</h3>
+            <p>一个面向问答场景的应用，包含数据处理、检索与交互式前端页面。</p>
+            <a href="https://github.com/LEOZKL0417" target="_blank" rel="noreferrer"
+              >查看仓库</a
+            >
+          </article>
+          <article class="project-card">
+            <h3>Project B</h3>
+            <p>一个聚焦自动化流程的工具项目，用于提升日常开发与数据整理效率。</p>
+            <a href="https://github.com/LEOZKL0417" target="_blank" rel="noreferrer"
+              >查看仓库</a
+            >
+          </article>
+          <article class="project-card">
+            <h3>Project C</h3>
+            <p>一个持续迭代中的个人实验项目，探索 AI 与产品设计的结合方式。</p>
+            <a href="https://github.com/LEOZKL0417" target="_blank" rel="noreferrer"
+              >查看仓库</a
+            >
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="contact reveal">
+        <h2>联系我</h2>
+        <p>如果你想合作交流，可以通过以下方式找到我。</p>
+        <div class="contact-links">
+          <a href="mailto:your_email@example.com">your_email@example.com</a>
+          <a href="https://github.com/LEOZKL0417" target="_blank" rel="noreferrer"
+            >github.com/LEOZKL0417</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Leo. Built on GitHub Pages.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
