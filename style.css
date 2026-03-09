@@ -96,6 +96,9 @@ a {
 .nav-links {
   display: flex;
   gap: 18px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  row-gap: 6px;
   font-size: 0.94rem;
 }
 
@@ -427,6 +430,199 @@ main {
   font-size: 0.95rem;
 }
 
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.album-card {
+  grid-column: span 4;
+  display: block;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  overflow: hidden;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.album-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(209, 79, 45, 0.45);
+  box-shadow: 0 20px 34px rgba(17, 26, 38, 0.16);
+}
+
+.album-cover-wrap {
+  position: relative;
+}
+
+.album-cover-wrap::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 40%;
+  background: linear-gradient(to top, rgba(15, 23, 42, 0.35), transparent);
+  pointer-events: none;
+}
+
+.album-cover {
+  display: block;
+  width: 100%;
+  aspect-ratio: 5 / 4;
+  object-fit: cover;
+}
+
+.album-body {
+  padding: 14px 14px 18px;
+}
+
+.album-body h3 {
+  font-size: 1.55rem;
+  margin-bottom: 6px;
+}
+
+.album-meta {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.album-text {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.album-shell {
+  gap: 14px;
+}
+
+.album-hero,
+.album-viewer {
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.album-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: 16px;
+  padding: 16px;
+}
+
+.album-hero-cover {
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.album-hero-cover img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 260px;
+  object-fit: cover;
+}
+
+.album-hero-body {
+  display: grid;
+  align-content: start;
+  gap: 8px;
+  padding: 2px 6px 2px 2px;
+}
+
+.album-hero-body h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+}
+
+.album-viewer {
+  padding: clamp(14px, 3vw, 22px);
+}
+
+.viewer-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.viewer-head h2 {
+  font-size: clamp(1.7rem, 4vw, 2.2rem);
+}
+
+.viewer-counter {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.slider-shell {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+}
+
+.slide-nav {
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.88);
+  color: var(--accent-deep);
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.slide-nav:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.slide-track {
+  display: flex;
+  overflow-x: auto;
+  border-radius: 14px;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  border: 1px solid rgba(31, 36, 48, 0.15);
+  background: #0f172a;
+}
+
+.slide-track::-webkit-scrollbar {
+  display: none;
+}
+
+.slide-item {
+  margin: 0;
+  min-width: 100%;
+  scroll-snap-align: start;
+}
+
+.slide-image {
+  display: block;
+  width: 100%;
+  max-height: min(74vh, 780px);
+  min-height: 360px;
+  object-fit: cover;
+}
+
+.slide-caption {
+  margin-top: 12px;
+  font-size: 0.95rem;
+  color: var(--muted);
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(31, 36, 48, 0.12);
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(14px);
@@ -447,6 +643,14 @@ main {
 
   .feed-button {
     grid-column: span 12;
+  }
+
+  .album-card {
+    grid-column: span 6;
+  }
+
+  .album-hero {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -470,5 +674,24 @@ main {
 
   .project-card {
     grid-column: span 12;
+  }
+
+  .album-card {
+    grid-column: span 12;
+  }
+
+  .slider-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .slide-nav {
+    width: 100%;
+    border-radius: 10px;
+    height: 38px;
+    font-size: 0.95rem;
+  }
+
+  .slide-image {
+    min-height: 240px;
   }
 }

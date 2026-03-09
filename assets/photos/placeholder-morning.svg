@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+  <defs>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fde68a" />
+      <stop offset="100%" stop-color="#22c55e" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#g2)" />
+  <circle cx="960" cy="180" r="74" fill="#fef3c7" opacity="0.9" />
+  <path d="M0 700 C230 620 390 760 590 700 C760 650 950 740 1200 680 L1200 900 L0 900 Z" fill="#15803d" opacity="0.62" />
+  <path d="M0 760 C220 690 420 810 620 740 C850 670 970 820 1200 760 L1200 900 L0 900 Z" fill="#14532d" opacity="0.72" />
+  <text x="80" y="840" fill="#0f172a" font-size="52" font-family="Segoe UI, sans-serif">Your Photo Placeholder</text>
+</svg>

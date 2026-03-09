@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Interesting Detail | Leo</title>
+    <title>Portfolio Album | Leo</title>
     <meta
       name="description"
-      content="Leo 的内容详情页，包含 summary 和个人思考。"
+      content="Leo 的摄影相册详情页，支持横向滑动浏览照片。"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -29,16 +29,17 @@
       </nav>
     </header>
 
-    <main class="page-shell">
-      <a class="back-link reveal" href="interesting.html">← 返回条目列表</a>
-      <article id="detail-view" class="detail-card reveal"></article>
+    <main class="page-shell album-shell">
+      <a class="back-link reveal" href="portfolio.html">← 返回相册列表</a>
+      <section id="album-hero" class="album-hero reveal"></section>
+      <section id="album-viewer" class="album-viewer reveal"></section>
     </main>
 
     <footer class="site-footer">
       <p>© <span id="year"></span> Leo. Built on GitHub Pages.</p>
     </footer>
 
-    <script src="interesting-data.js"></script>
-    <script src="interesting.js"></script>
+    <script src="portfolio-data.js"></script>
+    <script src="portfolio.js"></script>
   </body>
 </html>

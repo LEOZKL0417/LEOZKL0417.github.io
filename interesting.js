@@ -49,6 +49,7 @@ function parseLocalDate(dateValue) {
 }
 
 function createTagLabel(typeValue) {
+  if (typeValue === "project" || typeValue === "Project") return "Project";
   if (typeValue === "paper") return "Paper";
   if (typeValue === "video") return "Video";
   return "Note";

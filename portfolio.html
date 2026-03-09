@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Interesting Detail | Leo</title>
+    <title>Portfolio | Leo</title>
     <meta
       name="description"
-      content="Leo 的内容详情页，包含 summary 和个人思考。"
+      content="Leo 的摄影作品集，记录拍摄瞬间与作品说明。"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -30,15 +30,31 @@
     </header>
 
     <main class="page-shell">
-      <a class="back-link reveal" href="interesting.html">← 返回条目列表</a>
-      <article id="detail-view" class="detail-card reveal"></article>
+      <section class="intro-card reveal">
+        <p class="kicker">Photography / Visual Notes</p>
+        <h1>作品集</h1>
+        <p>
+          这里是相册入口。每个相册有封面和文字说明，点击封面后进入可滑动浏览的详情页。
+        </p>
+      </section>
+
+      <section class="reveal">
+        <div class="section-head">
+          <h2>相册列表</h2>
+          <p>
+            每个卡片是一组作品，封面下方就是这组内容的文字注释。后续你只需修改
+            <code>portfolio-data.js</code>。
+          </p>
+        </div>
+        <div id="album-grid" class="album-grid"></div>
+      </section>
     </main>
 
     <footer class="site-footer">
       <p>© <span id="year"></span> Leo. Built on GitHub Pages.</p>
     </footer>
 
-    <script src="interesting-data.js"></script>
-    <script src="interesting.js"></script>
+    <script src="portfolio-data.js"></script>
+    <script src="portfolio.js"></script>
   </body>
 </html>
