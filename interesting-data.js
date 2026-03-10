@@ -13,7 +13,9 @@ window.interestingItems = [
       date: "2026-03-09",
       progress: [
         "完成 recommend system 与 chatbot 功能合并",
-        "在 chatbot 中添加「猜你想问」feature"
+        "在 chatbot 中添加「猜你想问」feature",
+        "加入题目选项的中文翻译",
+        "添加了点击等价词后显示翻译、brief 解释和对应题目问题"
       ],
       blockers: ["登录功能待接入"],
       next: ["接入并联调登录流程"]
